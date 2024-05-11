@@ -414,7 +414,7 @@ p {
   .g-scrolly-container .g-scrolly-sticky .g-scrolly-image {
     position: absolute;
     top: 0;
-    height: 100%;
+    height: auto;
     width: 100%;
     overflow: hidden;
     pointer-events: none;
@@ -430,7 +430,7 @@ p {
   .g-scrolly-container .g-scrolly-sticky .g-scrolly-image img {
     width: 100%;
     max-width: 100%;
-    height: 100vh;
+    height: auto;
     -o-object-fit: cover;
        object-fit: cover;
     pointer-events: none;
@@ -573,4 +573,7 @@ section {
   /* animation-fill-mode: forwards; */
   top: 0;
   transform: translate(0, -100%);
+}
+#foodtruck {
+  background-color: greenyellow;
 }
