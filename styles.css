@@ -593,3 +593,6 @@ section {
 #foodtruck {
   background-color: greenyellow;
 }
+#conclusion{
+  height: 100vh;
+}
