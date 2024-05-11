@@ -19,6 +19,16 @@ p {
     unicode-bidi: isolate;
 }
 
+.chaphead {
+  font-size: large;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+
 /* Body 
 *******************************/
 .g-body {
@@ -302,6 +312,7 @@ p {
   }
   .g-scrolly-container .g-scrolly-scroll-text .g-scrolly-caption:last-of-type {
     height: 60vh;
+   
   }
   .g-scrolly-container .g-scrolly-scroll-text .g-scrolly-caption p.g-scrolly-text {
     color: #fff;
@@ -314,6 +325,7 @@ p {
     max-width: calc(100% - 40px);
     margin: auto;
   }
+ 
   @media (min-width: 740px) {
     .g-scrolly-container .g-scrolly-scroll-text .g-scrolly-caption p.g-scrolly-text {
       font: 300 1.75rem/1.2 "nyt-cheltenham", georgia, "times new roman", times, serif;
@@ -324,6 +336,7 @@ p {
     max-width: calc(100% - 40px);
     margin: auto;
     padding: 5px;
+    height: 150vh;
   }
   @media (min-width: 740px) {
     .g-scrolly-container .g-scrolly-scroll-text .g-scrolly-caption #top-slide-6 {
@@ -480,6 +493,9 @@ section {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 70px;
+}
+#intro {
+  padding-top: 150px; 
 }
 
 #nhv-history {
