@@ -98,3 +98,47 @@ const animatedElements = document.querySelectorAll('.animated-title');
 animatedElements.forEach(element => {
     observer.observe(element);
 });
+
+const sections = document.querySelectorAll('section');
+console.log(sections);
+const options = {
+    threshold: 0.05
+};
+
+const observer2 = new IntersectionObserver(function(entries, observer2) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            console.log(entry.target.id)
+            const id = entry.target.id;
+            let color = '';
+
+            // Define colors for each section
+            switch (id) {
+                case 'intro':
+                    color = '#FFE9CE';
+                    break;
+                case 'nhv-history':
+                    color = '#2196F3';
+                    break;
+                case 'scrolly2':
+                    color = '#8FD5A6'; // You can define your color here
+                    break;
+                case 'foodtruck':
+                    color = '#FFC107';
+                    break;
+                case 'conclusion':
+                    color = '#AD0000';
+                    break;   
+                default:
+                    color = '#000000'; // Default color
+            }
+
+            // Change body background color with smooth transition
+            document.body.style.backgroundColor = color;
+        }
+    });
+}, options);
+
+sections.forEach(section => {
+    observer2.observe(section);
+});

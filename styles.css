@@ -4,6 +4,7 @@ html{
 body{
     margin: 0;
     min-height: 100%;
+    transition: background-color 0.5s ease;
 }
 
 #section1 {
@@ -493,14 +494,16 @@ section {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 70px;
+  border-top: 1px solid #000; /* Add border on top */
+  border-bottom: 1px solid #000;
 }
 #intro {
   padding-top: 150px; 
 }
 
 #nhv-history {
-  background-color: aquamarine;
-  padding-bottom: 220px;
+  /* background-color: aquamarine; */
+  padding-bottom: 300px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
@@ -559,7 +562,7 @@ section {
   transform: translate(0, 100%);
 }
 .animated-title > div.text-top div span:first-child {
-  color: #767676;
+  color: #FFFFFF;
 }
 .animated-title > div.text-bottom {
   bottom: 0;
@@ -591,7 +594,7 @@ section {
   transform: translate(0, -100%);
 }
 #foodtruck {
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
 }
 #conclusion{
   height: 100vh;
