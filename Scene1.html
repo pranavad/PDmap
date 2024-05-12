@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>New Haven Coast</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+ 
+<script src="scrollama.js"></script> <!-- Include Scrollama library -->
+<script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
+
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="g-scrolly-container" id="top-scrolly">
+    <div class="g-scrolly-sticky">
+        
+        <!-- Slide 1 -->
+        <div class="g-scrolly-image" id="top-slide-1">
+            <video autoplay loop muted playsinline="true" src="gulls.mp4"></video>
+            <!-- <img src="painting.png"> -->
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="g-scrolly-image" id="top-slide-2">
+            <!-- Your content for slide 2 here -->
+            <!-- <img src="trucks.jpg"> -->
+            <video autoplay loop muted playsinline="true" src="trim3.mp4"></video>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="g-scrolly-image" id="top-slide-3">
+            <!-- Your content for slide 3 here -->
+            <!-- <img src="postcard1.jpeg"> -->
+            <img src="trucks.jpg">
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="g-scrolly-image" id="top-slide-4">
+            <!-- Your content for slide 4 here -->
+            <img src="people.png">
+        </div>
+
+    </div>
+
+    <!-- Textual content for each slide -->
+    <div class="g-scrolly-scroll-text">
+        
+        <!-- Caption for Slide 1 -->
+        <div class="g-scrolly-caption">   
+            <p class="g-scrolly-text" id="top-slide-1">Paradise can be found along the abandoned New Haven shore …</p>
+        </div>
+        
+        <!-- Caption for Slide 2 -->
+        <div class="g-scrolly-caption">   
+            <p class="g-scrolly-text" id="top-slide-2">Where cultures and flavors meet  …</p>
+        </div>
+        
+        <!-- Caption for Slide 3 -->
+        <div class="g-scrolly-caption">   
+            <p class="g-scrolly-text" id="top-slide-3"> This is New Haven's Food Truck Paradise …  </p>
+        </div>
+        
+        <!-- Caption for Slide 4 -->
+        <div class="g-scrolly-caption"> 
+            <div id="top-slide-6" class="g-scrolly-text g-top-slide-text">
+              
+            <h1 class="g-top-slide-text"> Will THE SAVIORS OF NEW HAVEN'S SHORE BE FORGOTTEN?
+                </h1>
+            <p class="g-top-byline">Story by Pranava Dhar </p>
+        </div> 
+        <!-- <div id="g-chapter-break-1" class="g-top-slide-caption">
+            <span class="g-chapter-kicker">I.</span>
+            <h2 class="g-chapter-hed">Guardians of the Forest</h2>
+        </div>  -->
+        </div>
+        
+<!-- <caption 5
+        <div class="g-scrolly-caption">   
+            <p class="g-scrolly-text" id="top-slide-5">Caption for Slide 5</p>
+        </div>
+        
+        <Additional content for Slide 6 >
+        <div class="g-scrolly-caption">
+            <div id="top-slide-6" class="g-scrolly-text g-top-slide-text">
+             
+        </div> -->
+        
+    </div>
+</div>
+<section id="intro">
+    <p class="g-body">When the first vendors came to Long Wharf, it was abandoned marshland.</p>
+
+    <p class="g-body"> Today, walking through on a Sunday afternoon, you can hear a constant chatter of Spanish, kids playing, couples canoodling, and orders flying.</p>
+    <img style="width: 800px; display: block; margin-left:auto; margin-right: auto; margin-bottom: 10px; margin-top: 50px; " class="g-media text-img" preload="auto"  src="trucks.jpeg"> 
+
+
+    <p class="g-body"> This tiny corner of New Haven's culture has seen a spurt of popularity over the past decade, as a popular rest-stop off of Highway I-95. </p>
+
+    <p class="g-body"> So much so that even someone even added a marker on Google Maps for a 'Food Truck Paradise' to the place where the trucks usually assemble in Long Wharf</p>
+
+ 
+    <p class="g-body"> The name stuck and in 2016, New Haven mayor made the name official, explaining that "<i>We call it ​‘Food Truck Paradise’ because that’s what Google calls it</i>" </p>
+
+
+    <video id="mapvid" style="width: 800px; display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; " class="g-media" preload="auto" autoplay loop muted playsinline="true" src="zoom1.mp4"> </video>
+    <p class="g-body"> The food trucks have successfully helped revive a forgotten part of New Haven. But it is uncertain if the city wants to keep them in its future.     
+    </p>
+</section>
+<section id="nhv-history">
+    <h1 style="font-size:2em;" class="g-body chaphead"> How the shore was forgotten </h1> 
+<!-- standardize section headings and section design  -->
+
+    <p class="g-body">Downtown New Haven is only a 7 minute car ride or a 30 minute walk away from the New Haven shore </p>
+    <span style=" margin-bottom: 100px;">
+ <img style="width: 800px; display: block; margin-left:auto; margin-right: auto; margin-bottom: 10px; margin-top: 50px; " class="g-media text-img" preload="auto"  src="gmapsdistance.png"> 
+ <center><caption style="margin-left: auto; margin-right: auto;"> Distance on Google Maps</caption></center>
+</span>   
+<p class="g-body">During colonial times, New Haven used to be a very important port </p>
+  <p class="g-body"> The shore was considered a, if not the, critical piece of New Haven's economy and identity.</p> 
+
+
+ <img style="width: 800px; display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; " class="g-media text-img" preload="auto"  src="newhvhist.jpeg"> 
+
+
+    <p class="g-body">Yet today, people living in New Haven don't seem to think about the shore at all.</p>
+
+
+    <div class="funquote"> </div>
+    <div class="animated-title">
+        <div class="text-top">
+          <div>
+            <span>I honestly forget we </span>
+            <span>live on the Atlantic Ocean</span>
+          </div>
+        </div>
+        <div class="text-bottom">
+          <div>Charlotte Hawes, <br> Yale Student</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="funquote"> </div>
+    <div class="animated-title slide-right">
+        <div class="text-top">
+          <div>
+            <span>You don't really come live in New Haven </span>
+            <span>for the beaches</span>
+          </div>
+        </div>
+        <div class="text-bottom">
+          <div>Evan Gorelick, <br> New Havener</div>
+        </div>
+      </div>
+    </div>
+
+    
+ 
+   <div class="buffer" style="height: 200px; width: 100%;"></div>
+
+   <p class="g-body">To understand why, we must delve into New Haven's history, documented in maps of the US Geological Survey.</p>
+
+
+    <div class="g-scrolly-container" id="map-scrolly">
+        <div class="g-scrolly-sticky">
+            
+            <!-- Slide 1 -->
+            <div class="g-scrolly-image g-scrolly-image2" id="map-slide-1">
+                <img src="1892a.png">
+            </div>
+    
+            <!-- Slide 2 -->
+            <div class="g-scrolly-image g-scrolly-image2" id="map-slide-2">
+                <!-- Your content for slide 2 here -->
+                <img src="1892c.png">
+            </div>
+    
+            <div class="g-scrolly-image g-scrolly-image2" id="map-slide-3">
+              <!-- Your content for slide 2 here -->
+              <!-- <img src="1892c.png"> -->
+              <img src="1954q.png">
+          </div>
+          <div class="g-scrolly-image g-scrolly-image2" id="map-slide-4">
+            <!-- Your content for slide 3 here -->
+            <img src="1954r.png">
+   
+        </div>
+            <!-- Slide 3 -->
+            <div class="g-scrolly-image g-scrolly-image2" id="map-slide-5">
+                <!-- Your content for slide 3 here -->
+                <img src="1954w.png">
+       
+            </div>
+    
+            <!-- Slide 4 -->
+            <div class="g-scrolly-image g-scrolly-image2" id="map-slide-6">
+                <!-- Your content for slide 4 here -->
+                <img src="1954e.png">
+            </div>
+            <div class="g-scrolly-image g-scrolly-image2" id="map-slide-7">
+                <!-- Your content for slide 4 here -->
+                <img src="1967a.png">
+            </div>
+    
+            <div class="g-scrolly-image g-scrolly-image2" id="map-slide-8">
+                <!-- Your content for slide 4 here -->
+                <img src="1967b.png">
+            </div>
+
+            
+    
+        </div>
+    
+        <!-- Textual content for each slide -->
+        <div class="g-scrolly-scroll-text">
+            
+            <!-- Caption for Slide 1 -->
+            <div class="g-scrolly-caption">   
+                <p class="g-scrolly-text" id="map-slide-1"></p>
+            </div>
+            
+            <!-- Caption for Slide 2 -->
+            <div class="g-scrolly-caption">   
+                <p class="g-scrolly-text" id="map-slide-2"></p>
+            </div>
+            
+            <!-- Caption for Slide 3 -->
+            <div class="g-scrolly-caption">   
+                <p class="g-scrolly-text" id="map-slide-3"></p>
+            </div>
+            <div class="g-scrolly-caption">   
+                <p class="g-scrolly-text" id="map-slide-4"></p>
+            </div>
+            <div class="g-scrolly-caption">   
+                <p class="g-scrolly-text" id="map-slide-5"></p>
+            </div>
+            <div class="g-scrolly-caption">   
+                <p class="g-scrolly-text" id="map-slide-6"></p>
+            </div>
+            <div class="g-scrolly-caption">   
+                <p class="g-scrolly-text" id="map-slide-7"></p>
+            </div>
+            
+          
+
+        </div>
+    </div>
+   
+
+    <div class="funquote"> </div>
+    <div class="animated-title">
+        <div class="text-top">
+          <div>
+            <span>New Haven has</span>
+            <span>a shore???</span>
+          </div>
+        </div>
+        <div class="text-bottom">
+          <div>Zoe Mohaupt, <br> Yale Freshman</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="funquote"> </div>
+    <div class="animated-title slide-right squawk">
+        <div class="text-top">
+          <div>
+            <span>I didn't realize we were on the water till I heard </span>
+            <span> the seagulls</span>
+          </div>
+        </div>
+        <div class="text-bottom">
+          <div>Pranava Dhar, <br> Yale Junior</div>
+        </div>
+      </div>
+      <audio id="squawk" src="gull.mp3" preload="auto">
+    </div>
+
+
+</section>    
+
+
+
+<style>
+
+figure {
+        /* position: -webkit-sticky;  */
+        position: sticky;
+        width: 50%;
+        margin: 0;
+        right: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        
+        z-index: 0;
+      }
+
+    #scrolly2 figure {
+      /* position: -webkit-sticky; */
+    position: sticky;
+    float: right;
+    top: 0;
+    right: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    z-index: 1;
+    overflow-y: auto;
+      }
+
+  #scrolly2{
+    padding-bottom: 0;
+      padding-top: 0;
+  }
+   #scrolly2 > * {
+      -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+     
+      }
+#scrolly-container{
+  /* background-color: #111; */
+    position: relative;
+    /* display: block; */
+    width: 100%;
+    max-width: 100%;
+    top: 0;
+    margin: 0 0 0;
+    /* height: 300vh; */
+    font-size: 20px;
+
+    
+
+    
+  }
+  article {
+        position: relative;
+  }
+      .step {
+        background-color: #000;
+        color: #fff;
+        margin-bottom: 50em;
+        overflow-y: auto;
+        width: 50%;
+        
+
+
+      } 
+    
+      .step:last-child {
+        margin-bottom: 0;
+      }
+
+      .step.is-active {
+        background-color: 	#9c0f0f;
+        color: #FFF;
+      }
+      .step p{
+        display: block;
+        margin-block-start: .5em;
+        margin-block-end: .5em;
+         margin-inline-start: 0px;
+         margin-inline-end: 0px;
+        unicode-bidi: isolate;
+        /* font: Georgia; */
+        margin-left: auto;
+        margin-right: auto;
+        font: "nyt-cheltenham", georgia, "times new roman", times, serif;
+
+      }
+
+    </style>
+<div id="scrolly-container">
+<section id="scrolly2">
+    <figure>
+        <div id="map" style="position: relative; top: 0; bottom: 0; width: 100%; height:100vh">
+        </div>
+          </figure>
+
+          <article>
+            <div style="height:90vh;"></div>
+            <div id="baker" class="step active stepdiv" data-step="1">
+              <p style="margin-left: 50px; margin-right: auto;">As the shore seemed forgotten, it became an area for the city to dump its negative externalities.</p>
+            </div>
+
+        
+            
+         
+            <div style="margin-bottom: 25em" id="aldgate" class="step stepdiv" data-step="2">
+              <p style="margin-left: 50px; margin-right: auto;">Consider the <span style="color: #734dff;">New Haven Harbor Station</span>, for example</p>
+              <img style="width: 50%; display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; " class="g-media text-img" preload="auto"  src="harborstation.webp"> 
+
+            </div>
+            <div style="margin-bottom: 25em" id="london-bridge" class="step stepdiv" data-step="2">
+              <p style="margin-left: 50px; margin-right: auto;">In 1975, the city innaugrated this <span style="color: #734dff;">power plant</span> just opposite Long Wharf, on New Haven's East Shore</p>
+             
+            </div>
+
+            <div style="margin-bottom: 25em" id="woolwich" class="step stepdiv" data-step="2">
+              <p style="margin-left: 50px; margin-right: auto;"><span style="color: #734dff;">The plant's</span> construction had been hastily completed just two years before Congress amended the Clean Air Act in 1977, allowing it to be grandfathered in.</p>
+          
+            </div>
+            <div style="margin-bottom: 25em" class="step stepdiv" data-step="2">
+              <p style="margin-left: 50px; margin-right: auto;">In the early 2000, it was revealed <span style="color: #734dff;">the New Haven Harbor Station</span> had been spewing pollution into the local communities for decades. The plant was subsequently met with protests calling for its shutdown as well as that of the other grandfathered 'Sooty Six.'</p>
+              <img style="width: 50%; display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; " class="g-media text-img" preload="auto"  src="sootysix1.png"> 
+
+            </div>
+            
+            <div class="step stepdiv" data-step="2">
+              <p style="margin-left: 50px; margin-right: auto;">Yet, the city continues to drag its heels. While there have been improvements made to the <span style="color: #734dff;">the plant</span>, it remains one of New Haven's top polluters to this day.</p>
+              <img style="width: 50%; display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; " class="g-media text-img" preload="auto"  src="sootysix2.png"> 
+
+            </div>
+            
+            
+            
+            
+          
+          
+           
+  
+      
+      
+  
+            <div style="margin-bottom: 25em" id="woolwichfinal" class="step stepdiv" data-step="2">
+              <p style="margin-left: 50px; margin-right: auto;">Similar is the story of New Haven's <span style="color: #fba40e;">Tweed Airport</span>.</p>
+              <img style="width: 50%; display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; " class="g-media text-img" preload="auto"  src="tweed.png"> 
+
+            </div>
+           
+            <div id="woolwichfinal2" style="margin-bottom: 25em" class="step stepdiv" data-step="2">
+              <p style="margin-left: 50px; margin-right: auto;"> <span style="color: #fba40e;">Tweed</span>, situated amidst residential neighborhoods, has long been a source of contention among local residents. </p>
+              <img style="width: 50%; display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; " class="g-media text-img" preload="auto"  src="expansion.webp"> 
+
+            </div>
+            <div id="woolwichfinal3" style="margin-bottom: 25em" class="step stepdiv" data-step="2">
+              <p style="margin-left: 50px; margin-right: auto;">    For those who live nearby in East Haven, <span style="color: #fba40e;">the Airport's</span> operations pose significant challenges, ranging from increased noise pollution to concerns about air quality and safety.  </p>
+             
+            </div>
+            <div style="margin-bottom: 25em" class="step stepdiv" data-step="2">
+              <p style="margin-left: 50px; margin-right: auto;">  
+              For the past years, Avports, a Goldman Sachs subsidiary and current operator of the airport, has been pushing to expand the airport further into East Haven for a $100 million project. 
+                </p>
+            
+            </div>
+            <div id="woolwichfinal4" style="margin-bottom: 25em" class="step stepdiv" data-step="2">
+              <p style="margin-left: 50px; margin-right: auto;">  
+              This <span style="color: #a30000;">expansion</span> is expected to not only increase noise pollution and environmental degradation, but also destroy East Haven's wildlife-rich wetlands
+                </p>
+            
+            </div>
+          
+            <div class="step stepdiv" data-step="5">
+            <center>   <p > Despite being fraught with these environmental and residential problems, the city has pushed through the masterplan, with hopes to expand New Haven as a regional hub. </p>
+   
+            </center>
+             </div>
+
+             <div  id="conclusiondiv" class="step stepdiv" data-step="5">
+              <center>   <p><span style="color: #734dff;">The New Haven Harbor Station</span> and <span style="color: #fba40e;">Tweed Airport</span> highlight the city's historical attitude towards New Haven's shore and the people around it: apathy and unconcern. </p>
+              </center>
+               </div>
+       
+             <div style="height:30vh;"></div>
+             
+  
+           
+          </article>
+</section>
+</div>
+<script>
+          
+ 	mapboxgl.accessToken = 'pk.eyJ1IjoicHJhbmF2YWRoYXIiLCJhIjoiY2x0ZzR4Znd1MTAxNjJqcG1wN25ycDdqMSJ9.LJulMBupGQQ5pGT3R4JmMQ';
+    const map = new mapboxgl.Map({
+        style: "mapbox://styles/pranavadhar/clw3fiatc08d901qlh1kt985u",
+		container: 'map', // container ID
+        center: [-72.89897042057791, 41.26726558362469], // starting position [lng, lat]
+        zoom: 12, // starting zoom,
+		interactive: false
+    });
+    map.on('load', function() {
+    map.resize()
+});
+var main = d3.select("main");
+var scrolly2 = main.select("#scrolly2");
+var figure2 = scrolly2.select("figure");
+var article2 = scrolly2.select("article");
+var step2 = article2.selectAll(".step");
+var scroller2 = scrollama();
+console.log(article2);
+console.log()
+
+function handleResize2() {
+        // 1. update height of step elements
+        var stepH = Math.floor(window.innerHeight * 0.75);
+        // step2.style("height", stepH + "px");
+
+        var figureHeight = window.innerHeight;
+        var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+
+        figure2
+          .style("height", "100vh")
+          .style("top", figureMarginTop + "px");
+
+        // 3. tell scrollama to update new element dimensions
+        scroller2.resize();
+      }
+
+      // scrollama event handlers
+      function handleStepEnter2(response) {
+        console.log(response);
+        // response = { element, direction, index }
+        console.log("helloworld");
+        // add color to current step only
+        step2.classed("is-active", function(d, i) {
+          return i === response.index;
+        });
+
+        // update graphic based on step
+        figure2.select("p").text(response.index + 1);
+      }
+
+      function setupStickyfill2() {
+        d3.selectAll(".sticky").each(function() {
+          Stickyfill.add(this);
+        });
+      }
+
+      function init() {
+        setupStickyfill2();
+
+        // 1. force a resize on load to ensure proper dimensions are sent to scrollama
+        
+		handleResize2();
+
+        // 2. setup the scroller passing options
+        // 		this will also initialize trigger observations
+        // 3. bind scrollama event handlers (this can be chained like below)
+     
+		scroller2
+          .setup({
+            step: "#scrolly2 article .step",
+            debug: false
+          })
+          .onStepEnter(handleStepEnter2);
+
+
+
+        // setup resize event
+        window.addEventListener("resize", handleResize2);
+      }
+
+      // kick things off
+      init();
+      const chapters = {
+        'baker': {
+            bearing: 27,
+            center: [-72.89897042057791, 41.26726558362469],
+            zoom: 12,
+            // pitch: 20
+			},
+        'aldgate': {
+            duration: 1000,
+            center: [-72.90354165496673, 41.28412055409564],
+            bearing: 100,
+            zoom: 14,
+            // pitch: 0
+        }, 
+        'london-bridge': {
+            bearing: 90,
+            center: [-72.90354165496673, 41.28412055409564],
+            zoom: 13,
+            // speed: 0.6,
+            // pitch: 40
+        },
+        'woolwich': {
+            bearing: 90,
+            center: [-72.90354165496673, 41.28412055409564],
+            zoom: 14
+        },
+
+        'woolwichfinal': {
+            bearing: 80,
+            center: [-72.88740171712142, 41.26449677975822],
+            zoom: 14
+        },
+        'woolwichfinal2': {
+            bearing: 80,
+            center: [-72.88740171712142, 41.26449677975822],
+            zoom: 13
+        },
+        'woolwichfinal3': {
+            bearing: 80,
+            center: [-72.88740171712142, 41.26449677975822],
+            zoom: 14
+        },
+        'woolwichfinal4': {
+            bearing: 80,
+            center: [-72.88740171712142, 41.26449677975822],
+            zoom: 14
+        },
+        'conclusiondiv': {
+            bearing: 30,
+            center: [-72.89897042057791, 41.26726558362469],
+            zoom: 13
+        }
+        
+        
+
+    };
+
+    let activeChapterName = 'baker';
+    function setActiveChapter(chapterName) {
+        // if (chapterName === activeChapterName) return;
+		
+	console.log(map.getStyle().layers);
+
+        map.flyTo(chapters[chapterName]);
+
+        document.getElementById(chapterName).classList.add('active');
+        document.getElementById(activeChapterName).classList.remove('active');
+
+        activeChapterName = chapterName;
+		if (activeChapterName == 'baker'){
+			console.log("yooho2o");
+			// map.setPaintProperty('resco', 'fill-opacity', .6);
+
+
+		}
+		if (activeChapterName == 'aldgate'){
+			console.log("yoohoo");
+			map.setPaintProperty('station', 'fill-opacity', .6);
+
+		}
+		if (activeChapterName == 'london-bridge'){
+			console.log("yoohoo3");
+			map.setPaintProperty('longwharf', 'fill-opacity', 1);
+
+		}
+		if (activeChapterName == 'woolwich'){
+			console.log("y4oohoo3");
+			map.setLayoutProperty('road-simple', 'visibility', 'none');
+			map.setPaintProperty('rents', 'fill-opacity', 0);
+			map.setPaintProperty('time2', 'fill-opacity', 0);
+			map.setPaintProperty('resco', 'fill-opacity', 0);
+      map.setPaintProperty('vehicle', 'fill-opacity', .6);
+
+			
+
+		}
+    if (activeChapterName == 'woolwichfinal'){
+        console.log("yoohootemp");
+        map.setPaintProperty('airportold', 'fill-opacity', .6);
+        
+
+
+		}
+    if (activeChapterName == 'woolwichfinal4'){
+        console.log("woolwichfinal4");
+        map.setPaintProperty('airportold', 'fill-opacity', 0);
+        map.setPaintProperty('airportnew', 'fill-opacity', 0.6);
+        
+
+
+		}
+    if (activeChapterName == 'conclusiondiv'){
+        console.log("woolwichfinal4");
+        map.setPaintProperty('airportold', 'fill-opacity', 0.6);
+        map.setPaintProperty('airportnew', 'fill-opacity', 0);
+        map.setPaintProperty('station', 'fill-opacity', .6);
+        
+
+
+		}
+
+    }
+
+    function isElementOnScreen(id) {
+        const element = document.getElementById(id);
+        const bounds = element.getBoundingClientRect();
+        return bounds.top < window.innerHeight && bounds.bottom > 0;
+    }
+
+    // On every scroll event, check which element is on screen
+    window.onscroll = () => {
+        for (const chapterName in chapters) {
+            if (isElementOnScreen(chapterName)) {
+                setActiveChapter(chapterName);
+                break;
+            }
+        }
+    };
+
+
+
+
+</script>
+
+
+
+<section id="foodtruck">
+    <p class="g-body">The first food trucks came to Long Wharf nearly 25 years ago. Given the area's disuse and disregard by the city, they could exist here without trouble. </p>
+
+    <img style="width: 800px; display: block; margin-left: 40%; margin-right: auto; margin-bottom: 0; " class="g-media text-img" preload="auto"  src="taco.jpeg"> 
+
+
+    <p class="g-body">The food truck vendors and the community that has grown around them has revived Long Wharf.</p>
+
+
+    <p class="g-body">The first 'Food Truck Festival' in Connecticut was organized to celebrate the Long Wharf vendors in 2015, signifying the growing mainstream success of the trucks.</p>
+
+    <img style="width: 800px; display: block; margin-left: auto; margin-right: 40%; margin-bottom: 0; " class="g-media text-img" preload="auto"  src="festival.webp"> 
+
+
+    <p class="g-body">This, finally, put the city on notice. </p>
+    <p class="g-body">  The city extended its support, christening the Food Truck Paradise and investing in infrastructure to make the food trucks a more amenable spot. </p>
+    
+   
+       <img style="width: 800px; display: block; margin-left: auto; margin-right: 40%; margin-bottom: 0; " class="g-media text-img" preload="auto"  src="christened.png"> 
+
+       <p class="g-body">But having seen the success of the Food Truck Paradise as proof of Long Wharf's potential, the city is now looking past the food trucks.</p>
+       <p class="g-body"> In 2019, the city unveiled the Long Wharf Responsible Growth Plan which envisions Long Wharf transformed into "a vibrant waterfront neighborhood."</p>
+        
+       <img style="width: 800px; display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; " class="g-media text-img" preload="auto"  src="mockup.jpeg"> 
+
+        <p class="g-body">This initiative seeks to further capitalize on the area's newfound popularity by integrating mixed-use spaces, recreational facilities, and cultural attractions.</p>
+        <p class="g-body">It's unclear if these new plans include a space for the foodtrucks that made it possible for the city to revive the area</p>
+
+        <img style="width: 800px; display: block; margin-left: auto; margin-right: auto; margin-bottom: 0; " class="g-media text-img" preload="auto"  src="wharfplan.webp"> 
+
+
+   
+    <p class="g-body">Some residents of the largely white neighborhoods near the Wharf have expressed strong opinions that their surroundings should not be defined by the 'brash' trucks in these new plans:</p>
+
+    <p class="g-body"> <i>If you haven’t been down there recently, take the trip and see if you agree that waterfront planning shouldn’t revolve around a parking lot full of aging food trucks </i> New Haven resident</p>
+
+ 
+  
+    <p class="g-body">Will the food trucks have space to exist on the shore they brought back to life?</p>
+
+    
+ 
+    
+
+
+</section>
+
+<section id="conclusion">
+
+ 
+        <p class="g-body">The evolution of Long Wharf through the Food Truck Paradise has been a success story against the expectations of the city. </p>
+            
+        <p class="g-body">From being forgotten, the New Haven shore has transformed into a bustling community hub, drawing diverse crowds to enjoy culinary delights against the backdrop of New Haven's waterfront.</p>
+    
+        <p class="g-body">Yet, as the city pursues redevelopment plans for Long Wharf's future, the fate of the food trucks remains uncertain. While the vision for mixed-use spaces and cultural attractions is promising, it's essential to preserve the unique charm that these trucks have brought to the area.</p>
+    
+
+</section>
+
+<section id="credits" style="background-color: #222; border-top: 1px solid #ccc; padding: 20px 0; height: 100vh; font-family: Georgia; text-align: center; color: white;">
+  <div style="max-width: 600px; margin: 40vh auto;">
+      <p class="g-body" style="font-size: 1.2em; margin-bottom: 10px;">Credits</p>
+      <ul class="g-body" style="font-size: 1em; list-style-type: none; padding-inline-start: 0px;">
+          <li>Written by: Pranava Dhar</li>
+          <li>Images sourced from: Pranava Dhar</li>
+          <li>Video Footage Trimmed from Youtube</li>
+          <li>Web-design inspired by NYTimes</li>
+      </ul>
+  </div>
+</section>
+
+<script src="scripts.js"></script> <!-- Include your custom JavaScript file -->
+
+</body>
+</html>

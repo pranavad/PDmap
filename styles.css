@@ -291,7 +291,7 @@ p {
     width: 100%;
     max-width: 100%;
     top: 0;
-    margin: 0 0 80px;
+    margin: 0 0 20px;
   }
   @media (min-width: 740px) {
     .g-scrolly-container {
@@ -500,7 +500,7 @@ section {
 
 #nhv-history {
   background-color: aquamarine;
-  padding-bottom: 150px;
+  padding-bottom: 220px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
