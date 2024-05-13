@@ -128,7 +128,8 @@ const observer2 = new IntersectionObserver(function(entries, observer2) {
                     break;
                 case 'conclusion':
                     color = '#AD0000';
-                    break;   
+                    break;
+        
                 default:
                     color = '#000000'; // Default color
             }
