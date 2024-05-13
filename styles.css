@@ -4,8 +4,17 @@ html{
 body{
     margin: 0;
     min-height: 100%;
-    transition: background-color 0.5s ease;
-}
+    transition: background-color 0.5s linear;
+    /* font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;  */
+
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+  }
 
 #section1 {
     background-color: #e5e1df;
@@ -428,12 +437,13 @@ p {
   .g-scrolly-container .g-scrolly-sticky .g-scrolly-image {
     position: absolute;
     top: 0;
-    height: auto;
+    height: 100%;
     width: 100%;
     overflow: hidden;
     pointer-events: none;
     opacity: 0;
     transition: 0.5s all ease;
+    min-height: 0;
   }
   
   .g-scrolly-container .g-scrolly-sticky .g-scrolly-image.active {
@@ -520,7 +530,7 @@ section {
   color: #222;
   font-family: Georgia, 'Times New Roman', Times, serif, Arial, sans-serif;
   height: 90vmin;
-  left: 20%;
+  left: 25%;
   position: absolute;
   /* top: 50%; */
   transform: translate(-50%, -50%);
@@ -528,11 +538,11 @@ section {
   
 }
 .slide-right {
-  left: 80%;
+  left: 75%;
 }
 .funquote{
   padding-top: 60px;
-  padding-bottom: 150px;/
+  padding-bottom: 180px;/
 }
 
 
@@ -598,4 +608,40 @@ section {
 }
 #conclusion{
   height: 100vh;
+}
+
+.crimson-text-regular {
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.crimson-text-semibold {
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.crimson-text-bold {
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.crimson-text-regular-italic {
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.crimson-text-semibold-italic {
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.crimson-text-bold-italic {
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+  font-style: italic;
 }
