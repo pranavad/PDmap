@@ -508,7 +508,7 @@ section {
   border-bottom: 1px solid #000;
 }
 #intro {
-  padding-top: 100px; 
+  padding-top: 70px; 
 }
 
 #nhv-history {
@@ -607,7 +607,7 @@ section {
   /* background-color: greenyellow; */
 }
 #conclusion{
-  height: 100vh;
+  height: 120vh;
 }
 
 .crimson-text-regular {

@@ -124,10 +124,10 @@ const observer2 = new IntersectionObserver(function(entries, observer2) {
                     color = '#8FD5A6'; // You can define your color here
                     break;
                 case 'foodtruck':
-                    color = '#FFC107';
+                    color = '#BEA7E5';
                     break;
                 case 'conclusion':
-                    color = '#AD0000';
+                    color = '#DC493A';
                     break;
         
                 default:
