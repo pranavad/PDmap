@@ -454,7 +454,8 @@ p {
   .g-scrolly-container .g-scrolly-sticky .g-scrolly-image img {
     width: 100%;
     max-width: 100%;
-    height: auto;
+    /* height: auto; */
+    height: 100vh;
     -o-object-fit: cover;
        object-fit: cover;
     pointer-events: none;
