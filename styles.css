@@ -356,15 +356,35 @@ p {
   .g-scrolly-container .g-scrolly-scroll-text .g-scrolly-caption #top-slide-6 h1.g-top-slide-text {
     color: #fff;
     text-shadow: #111 0px 0px 6px;
-    font: 300 1.8rem/1.1 "nyt-cheltenham", georgia, "times new roman", times, serif;
+    /* font: 300 1.8rem/1.1 "nyt-cheltenham", georgia, "times new roman", times, serif */
+    /* font-family: "nyt-cheltenham", georgia, "times new roman", times, serif; */
+    line-height: 1.1;
+    font-size: 1.8rem;
+    /* font-weight: 300; */
     padding: 0;
     text-transform: uppercase;
     letter-spacing: 0.125rem;
     margin-top: 8px;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal; 
+
   }
   @media (min-width: 740px) {
     .g-scrolly-container .g-scrolly-scroll-text .g-scrolly-caption #top-slide-6 h1.g-top-slide-text {
-      font: 300 3rem/1.1 "nyt-cheltenham", georgia, "times new roman", times, serif;
+      /* font: 300 3rem/1.1 "nyt-cheltenham", georgia, "times new roman", times, serif; */
+      /* font: 300 1.8rem/1.1 "nyt-cheltenham", georgia, "times new roman", times, serif */
+    /* font-family: "nyt-cheltenham", georgia, "times new roman", times, serif; */
+    line-height: 1.1;
+    font-size: 3rem;
+    /* font-weight: 300; */
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    margin-top: 8px;
+    font-family: "Gelasio", serif;
+    font-weight: 400;
+    font-style: normal; 
     }
   }
   .g-scrolly-container .g-scrolly-scroll-text .g-scrolly-caption #top-slide-6 .g-top-kicker a {
